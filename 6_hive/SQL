@@ -1,0 +1,202 @@
+CREATE TABLE userlog (Day DATE, TickTime DOUBLE, Speed DOUBLE)
+    PARTITIONED BY (UserId BIGINT, HValue FLOAT)
+    STORED AS PARQUET;
+
+CREATE EXTERNAL TABLE external_userlog
+    (Day BIGINT, TickTime DOUBLE, Speed DOUBLE)
+    PARTITIONED BY (UserId int, HValue int)
+    ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde';
+
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u1.csv'	INTO	TABLE	external_userlog	partition	(UserId=	1	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u2.csv'	INTO	TABLE	external_userlog	partition	(UserId=	2	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u3.csv'	INTO	TABLE	external_userlog	partition	(UserId=	3	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u4.csv'	INTO	TABLE	external_userlog	partition	(UserId=	4	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u5.csv'	INTO	TABLE	external_userlog	partition	(UserId=	5	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u6.csv'	INTO	TABLE	external_userlog	partition	(UserId=	6	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u7.csv'	INTO	TABLE	external_userlog	partition	(UserId=	7	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u8.csv'	INTO	TABLE	external_userlog	partition	(UserId=	8	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u9.csv'	INTO	TABLE	external_userlog	partition	(UserId=	9	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u10.csv'	INTO	TABLE	external_userlog	partition	(UserId=	10	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u11.csv'	INTO	TABLE	external_userlog	partition	(UserId=	11	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u12.csv'	INTO	TABLE	external_userlog	partition	(UserId=	12	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u13.csv'	INTO	TABLE	external_userlog	partition	(UserId=	13	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u14.csv'	INTO	TABLE	external_userlog	partition	(UserId=	14	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u15.csv'	INTO	TABLE	external_userlog	partition	(UserId=	15	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u16.csv'	INTO	TABLE	external_userlog	partition	(UserId=	16	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u17.csv'	INTO	TABLE	external_userlog	partition	(UserId=	17	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u18.csv'	INTO	TABLE	external_userlog	partition	(UserId=	18	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u19.csv'	INTO	TABLE	external_userlog	partition	(UserId=	19	,HValue=23);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h23.u20.csv'	INTO	TABLE	external_userlog	partition	(UserId=	20	,HValue=23);
+
+
+
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u1.csv'	INTO	TABLE	external_userlog	partition	(UserId=	1	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u2.csv'	INTO	TABLE	external_userlog	partition	(UserId=	2	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u3.csv'	INTO	TABLE	external_userlog	partition	(UserId=	3	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u4.csv'	INTO	TABLE	external_userlog	partition	(UserId=	4	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u5.csv'	INTO	TABLE	external_userlog	partition	(UserId=	5	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u6.csv'	INTO	TABLE	external_userlog	partition	(UserId=	6	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u7.csv'	INTO	TABLE	external_userlog	partition	(UserId=	7	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u8.csv'	INTO	TABLE	external_userlog	partition	(UserId=	8	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u9.csv'	INTO	TABLE	external_userlog	partition	(UserId=	9	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u10.csv'	INTO	TABLE	external_userlog	partition	(UserId=	10	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u11.csv'	INTO	TABLE	external_userlog	partition	(UserId=	11	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u12.csv'	INTO	TABLE	external_userlog	partition	(UserId=	12	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u13.csv'	INTO	TABLE	external_userlog	partition	(UserId=	13	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u14.csv'	INTO	TABLE	external_userlog	partition	(UserId=	14	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u15.csv'	INTO	TABLE	external_userlog	partition	(UserId=	15	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u16.csv'	INTO	TABLE	external_userlog	partition	(UserId=	16	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u17.csv'	INTO	TABLE	external_userlog	partition	(UserId=	17	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u18.csv'	INTO	TABLE	external_userlog	partition	(UserId=	18	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u19.csv'	INTO	TABLE	external_userlog	partition	(UserId=	19	,HValue=86);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h86.u20.csv'	INTO	TABLE	external_userlog	partition	(UserId=	20	,HValue=86);
+
+
+
+
+
+
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u1.csv'	INTO	TABLE	external_userlog	partition	(UserId=	1	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u2.csv'	INTO	TABLE	external_userlog	partition	(UserId=	2	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u3.csv'	INTO	TABLE	external_userlog	partition	(UserId=	3	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u4.csv'	INTO	TABLE	external_userlog	partition	(UserId=	4	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u5.csv'	INTO	TABLE	external_userlog	partition	(UserId=	5	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u6.csv'	INTO	TABLE	external_userlog	partition	(UserId=	6	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u7.csv'	INTO	TABLE	external_userlog	partition	(UserId=	7	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u8.csv'	INTO	TABLE	external_userlog	partition	(UserId=	8	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u9.csv'	INTO	TABLE	external_userlog	partition	(UserId=	9	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u10.csv'	INTO	TABLE	external_userlog	partition	(UserId=	10	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u11.csv'	INTO	TABLE	external_userlog	partition	(UserId=	11	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u12.csv'	INTO	TABLE	external_userlog	partition	(UserId=	12	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u13.csv'	INTO	TABLE	external_userlog	partition	(UserId=	13	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u14.csv'	INTO	TABLE	external_userlog	partition	(UserId=	14	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u15.csv'	INTO	TABLE	external_userlog	partition	(UserId=	15	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u16.csv'	INTO	TABLE	external_userlog	partition	(UserId=	16	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u17.csv'	INTO	TABLE	external_userlog	partition	(UserId=	17	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u18.csv'	INTO	TABLE	external_userlog	partition	(UserId=	18	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u19.csv'	INTO	TABLE	external_userlog	partition	(UserId=	19	,HValue=70);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h70.u20.csv'	INTO	TABLE	external_userlog	partition	(UserId=	20	,HValue=70);
+
+
+
+
+
+
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u1.csv'	INTO	TABLE	external_userlog	partition	(UserId=	1	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u2.csv'	INTO	TABLE	external_userlog	partition	(UserId=	2	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u3.csv'	INTO	TABLE	external_userlog	partition	(UserId=	3	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u4.csv'	INTO	TABLE	external_userlog	partition	(UserId=	4	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u5.csv'	INTO	TABLE	external_userlog	partition	(UserId=	5	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u6.csv'	INTO	TABLE	external_userlog	partition	(UserId=	6	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u7.csv'	INTO	TABLE	external_userlog	partition	(UserId=	7	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u8.csv'	INTO	TABLE	external_userlog	partition	(UserId=	8	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u9.csv'	INTO	TABLE	external_userlog	partition	(UserId=	9	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u10.csv'	INTO	TABLE	external_userlog	partition	(UserId=	10	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u11.csv'	INTO	TABLE	external_userlog	partition	(UserId=	11	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u12.csv'	INTO	TABLE	external_userlog	partition	(UserId=	12	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u13.csv'	INTO	TABLE	external_userlog	partition	(UserId=	13	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u14.csv'	INTO	TABLE	external_userlog	partition	(UserId=	14	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u15.csv'	INTO	TABLE	external_userlog	partition	(UserId=	15	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u16.csv'	INTO	TABLE	external_userlog	partition	(UserId=	16	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u17.csv'	INTO	TABLE	external_userlog	partition	(UserId=	17	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u18.csv'	INTO	TABLE	external_userlog	partition	(UserId=	18	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u19.csv'	INTO	TABLE	external_userlog	partition	(UserId=	19	,HValue=38);
+LOAD	DATA	LOCAL	INPATH	'C:\Users\hadoop\Downloads\v12\userlog.h38.u20.csv'	INTO	TABLE	external_userlog	partition	(UserId=	20	,HValue=38);
+
+
+
+
+
+INSERT INTO userlog partition (UserId=1,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=1 and HValue=23;
+INSERT INTO userlog partition (UserId=2,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=2 and HValue=23;
+INSERT INTO userlog partition (UserId=3,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=3 and HValue=23;
+INSERT INTO userlog partition (UserId=4,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=4 and HValue=23;
+INSERT INTO userlog partition (UserId=5,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=5 and HValue=23;
+INSERT INTO userlog partition (UserId=6,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=6 and HValue=23;
+INSERT INTO userlog partition (UserId=7,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=7 and HValue=23;
+INSERT INTO userlog partition (UserId=8,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=8 and HValue=23;
+INSERT INTO userlog partition (UserId=9,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=9 and HValue=23;
+INSERT INTO userlog partition (UserId=10,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=10 and HValue=23;
+INSERT INTO userlog partition (UserId=11,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=11 and HValue=23;
+INSERT INTO userlog partition (UserId=12,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=12 and HValue=23;
+INSERT INTO userlog partition (UserId=13,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=13 and HValue=23;
+INSERT INTO userlog partition (UserId=14,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=14 and HValue=23;
+INSERT INTO userlog partition (UserId=15,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=15 and HValue=23;
+INSERT INTO userlog partition (UserId=16,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=16 and HValue=23;
+INSERT INTO userlog partition (UserId=17,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=17 and HValue=23;
+INSERT INTO userlog partition (UserId=18,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=18 and HValue=23;
+INSERT INTO userlog partition (UserId=19,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=19 and HValue=23;
+INSERT INTO userlog partition (UserId=20,HValue=23) SELECT Day,TickTime,Speed FROM external_userlog where UserId=20 and HValue=23;
+
+
+
+
+
+INSERT INTO userlog partition (UserId=1,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=1 and HValue=86;
+INSERT INTO userlog partition (UserId=2,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=2 and HValue=86;
+INSERT INTO userlog partition (UserId=3,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=3 and HValue=86;
+INSERT INTO userlog partition (UserId=4,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=4 and HValue=86;
+INSERT INTO userlog partition (UserId=5,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=5 and HValue=86;
+INSERT INTO userlog partition (UserId=6,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=6 and HValue=86;
+INSERT INTO userlog partition (UserId=7,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=7 and HValue=86;
+INSERT INTO userlog partition (UserId=8,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=8 and HValue=86;
+INSERT INTO userlog partition (UserId=9,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=9 and HValue=86;
+INSERT INTO userlog partition (UserId=10,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=10 and HValue=86;
+INSERT INTO userlog partition (UserId=11,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=11 and HValue=86;
+INSERT INTO userlog partition (UserId=12,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=12 and HValue=86;
+INSERT INTO userlog partition (UserId=13,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=13 and HValue=86;
+INSERT INTO userlog partition (UserId=14,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=14 and HValue=86;
+INSERT INTO userlog partition (UserId=15,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=15 and HValue=86;
+INSERT INTO userlog partition (UserId=16,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=16 and HValue=86;
+INSERT INTO userlog partition (UserId=17,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=17 and HValue=86;
+INSERT INTO userlog partition (UserId=18,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=18 and HValue=86;
+INSERT INTO userlog partition (UserId=19,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=19 and HValue=86;
+INSERT INTO userlog partition (UserId=20,HValue=86) SELECT Day,TickTime,Speed FROM external_userlog where UserId=20 and HValue=86;
+
+
+
+
+INSERT INTO userlog partition (UserId=1,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=1 and HValue=38;
+INSERT INTO userlog partition (UserId=2,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=2 and HValue=38;
+INSERT INTO userlog partition (UserId=3,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=3 and HValue=38;
+INSERT INTO userlog partition (UserId=4,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=4 and HValue=38;
+INSERT INTO userlog partition (UserId=5,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=5 and HValue=38;
+INSERT INTO userlog partition (UserId=6,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=6 and HValue=38;
+INSERT INTO userlog partition (UserId=7,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=7 and HValue=38;
+INSERT INTO userlog partition (UserId=8,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=8 and HValue=38;
+INSERT INTO userlog partition (UserId=9,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=9 and HValue=38;
+INSERT INTO userlog partition (UserId=10,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=10 and HValue=38;
+INSERT INTO userlog partition (UserId=11,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=11 and HValue=38;
+INSERT INTO userlog partition (UserId=12,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=12 and HValue=38;
+INSERT INTO userlog partition (UserId=13,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=13 and HValue=38;
+INSERT INTO userlog partition (UserId=14,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=14 and HValue=38;
+INSERT INTO userlog partition (UserId=15,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=15 and HValue=38;
+INSERT INTO userlog partition (UserId=16,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=16 and HValue=38;
+INSERT INTO userlog partition (UserId=17,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=17 and HValue=38;
+INSERT INTO userlog partition (UserId=18,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=18 and HValue=38;
+INSERT INTO userlog partition (UserId=19,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=19 and HValue=38;
+INSERT INTO userlog partition (UserId=20,HValue=38) SELECT Day,TickTime,Speed FROM external_userlog where UserId=20 and HValue=38;
+
+
+
+
+INSERT INTO userlog partition (UserId=1,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=1 and HValue=70;
+INSERT INTO userlog partition (UserId=2,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=2 and HValue=70;
+INSERT INTO userlog partition (UserId=3,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=3 and HValue=70;
+INSERT INTO userlog partition (UserId=4,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=4 and HValue=70;
+INSERT INTO userlog partition (UserId=5,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=5 and HValue=70;
+INSERT INTO userlog partition (UserId=6,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=6 and HValue=70;
+INSERT INTO userlog partition (UserId=7,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=7 and HValue=70;
+INSERT INTO userlog partition (UserId=8,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=8 and HValue=70;
+INSERT INTO userlog partition (UserId=9,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=9 and HValue=70;
+INSERT INTO userlog partition (UserId=10,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=10 and HValue=70;
+INSERT INTO userlog partition (UserId=11,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=11 and HValue=70;
+INSERT INTO userlog partition (UserId=12,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=12 and HValue=70;
+INSERT INTO userlog partition (UserId=13,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=13 and HValue=70;
+INSERT INTO userlog partition (UserId=14,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=14 and HValue=70;
+INSERT INTO userlog partition (UserId=15,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=15 and HValue=70;
+INSERT INTO userlog partition (UserId=16,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=16 and HValue=70;
+INSERT INTO userlog partition (UserId=17,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=17 and HValue=70;
+INSERT INTO userlog partition (UserId=18,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=18 and HValue=70;
+INSERT INTO userlog partition (UserId=19,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=19 and HValue=70;
+INSERT INTO userlog partition (UserId=20,HValue=70) SELECT Day,TickTime,Speed FROM external_userlog where UserId=20 and HValue=70;
