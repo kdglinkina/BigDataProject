@@ -31,7 +31,7 @@ local mqtt = require('mqtt')
 local json = require('json')
 
 --— Create instance
-connection = mqtt.new("client_id15623445", true)
+connection = mqtt.new("clientino", true)
 
 connection:login_set('Hans', 'Test')
 
